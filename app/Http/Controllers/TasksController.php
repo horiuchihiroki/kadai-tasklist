@@ -55,6 +55,8 @@ class TasksController extends Controller
         
         // タスクを作成
         $task = new Task;
+        dd(\Auth::id());
+        //$task->user_id = auth::;
         $task->content = $request->content;
         $task->status = $request->status;
         $task->save();
